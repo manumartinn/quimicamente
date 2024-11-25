@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Químicamente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Químicamente</h1>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="dni">DNI:</label>
+        <input type="number" id="dni" name="dni" required min="1000000" max="99999999" title="El DNI debe tener entre 7 y 8 dígitos.">
+        <button id="boton-enviar" type="submit">Iniciar</button>
+    </form>
+    <div id="mensaje-error" style="color: red; display: none; margin-top: 18px;"></div>
+    <div id="animacion" style="display:none;">
+        <p>Buscando pregunta...</p>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            const dniInput = document.getElementById('dni');
+            const dniValue = dniInput.value;
+
+            // Validar la longitud del DNI
+            if (dniValue.length < 7 || dniValue.length > 8) {
+                event.preventDefault(); // Evitar el envío del formulario
+                document.getElementById('mensaje-error').innerText = 'El DNI debe tener entre 7 y 8 dígitos.';
+                document.getElementById('mensaje-error').style.display = 'block';
+            } else {
+                document.getElementById('mensaje-error').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

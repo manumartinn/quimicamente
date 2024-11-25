@@ -1,0 +1,94 @@
+p {font-family: 'Arial', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+	text-align: center;
+}
+
+body/*{ background-image: linear-gradient(#296341, #043318);}*/
+{background-color: #f9ba59; background-size: 100%;}
+
+#respuestas {
+    width : 90%; 
+    max-width: 400px; 
+	min-width: 90%;
+	max-height: 150px ;
+	min-height: 20px;
+    margin: 20px auto; 
+    padding: 8px; 
+    background-color: white; 
+    color : rgb(32, 32, 32); /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: center; /* Alinear texto al centro */
+    font-family : 'Arial', sans-serif; /* Fuente */ 
+}
+
+#fondo {	
+	margin: 80px auto;
+	width: 80% ;
+	min-width: 330px;
+	max-width: 430px;
+	position : relative;
+	height: auto;
+	min-height: 300px;
+	max-height: 100%;
+	border-radius: 10px ;
+	overflow: hidden;
+	background-color: #ffa600;}
+
+.responsive-respuesta {
+	margin: 80px auto;
+	width: 50%;
+	min-width: 300px;
+	max-width: auto;
+	position: relative;
+	height: auto;
+	min-height: 300px;
+	max-height: 1000px;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #ff9f33;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);}
+
+#imagen1 {
+	max-width : 330px;
+	width: 100%;
+	position: relative;}
+
+.radio-container input[type="radio"] {
+	appearance: none; /* Quitar el estilo predeterminado */
+	width: 20px; /* Tamaño del botón */
+	height : 20px; /* Tamaño del botón */
+	border: 2px solid #333 ; /* Bordes */
+	border-radius: 50%; /* Forma circular */
+	margin-right: 10px; /* Espacio entre el botón y el texto */
+	cursor : pointer; /* Cambiar cursor a puntero */
+	transition: background-color 0.3s; /* Transición suave */}
+	
+/* Color cuando está seleccionado */
+.radio-container input[type="radio"]:checked {
+	background-color: black; /* Color negro cuando está seleccionado */
+	border: none; /* Sin borde al estar seleccionado */}
+	
+	/* Estilo del texto */
+.radio-container label {
+	text-align : center; /* Centrar texto */
+	font-size: 18px; /* Tamaño del texto */}
+
+#enviar{
+	display: block;
+	margin: 0px auto 20px auto;
+	width: 50%;
+	height : 50px;
+	border-radius: 10px;
+	border-color: transparent ;
+	background-color: white;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	font-family : 'Arial', sans-serif;
+	font-size: 18px;
+	transition: background-color 0.3s ease-out;
+}
+
+#enviar:hover{
+	background-color: white;
+}
