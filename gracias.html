@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracias por Participar</title>
+    <title>Gracias por Participar | Químicamente</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>¡Gracias por Participar!</h1>
+    <h2 style="margin-bottom: 0.3em;">Tu puntaje: <span id="puntaje"></span></h2>
+    <h2 style="margin-bottom: 0.9em;">Tiempo realizado: <span id="tiempo"></span></h2>
     <p>Tu participación es muy valiosa. Apreciamos que hayas respondido las preguntas sobre hormonas y emociones.</p>
     <p>Los resultados se están procesando y estarán disponibles pronto.</p>
-    <a href="tabla.php">Ver Resultados (Administradores)</a>
+    <p>¡Esperamos que les haya gustado!</p>
+    <b>Sexto año - Comunidad Educativa ATICA</b>
+    <script>
+        // Recuperar puntaje y tiempo del almacenamiento local (por ejemplo)
+        const puntaje = localStorage.getItem('puntaje');
+        const tiempo = localStorage.getItem('tiempo');
+
+        // Mostrar los datos si están disponibles
+        document.getElementById('puntaje').textContent = puntaje ? puntaje : "No disponible";
+        document.getElementById('tiempo').textContent = tiempo ? tiempo : "No disponible";
+    </script>
 </body>
 </html>

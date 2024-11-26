@@ -163,15 +163,14 @@
             const urlParams = new URLSearchParams(window.location.search);
             const nombre = urlParams.get('nombre');
             const dni = urlParams.get('dni');
-    
+
             const tiempoInicio = Date.now();
-    
+
             document.getElementById('preguntaForm').addEventListener('submit', function(event) {
                 event.preventDefault();
                 const respuestasSeleccionadas = document.querySelectorAll('input[type="radio"]:checked');
                 let puntaje = 0;
-    
-    
+
                 // Itera sobre las respuestas seleccionadas y suma puntos si son correctas
                 respuestasSeleccionadas.forEach(respuesta => {
                     console.log(`Respuesta seleccionada: ${respuesta.value}`);
@@ -179,12 +178,15 @@
                         puntaje += 10; // Añadir 10 puntos por cada respuesta correcta
                     }
                 });
-    
+
                 const tiempoFin = Date.now();
-                const tiempoTranscurrido = (tiempoFin - tiempoInicio) / 1000;
-    
-                
-    
+                const tiempoTranscurrido = ((tiempoFin - tiempoInicio) / 1000).toFixed(2); // Tiempo en segundos con dos decimales
+
+                // Guarda el puntaje y tiempo en el almacenamiento local
+                localStorage.setItem('puntaje', puntaje);
+                localStorage.setItem('tiempo', tiempoTranscurrido);
+
+                // Enviar los datos al backend
                 fetch('../guardar_resultado.php', {
                     method: 'POST',
                     headers: {
@@ -194,6 +196,7 @@
                 })
                 .then(response => {
                     if (response.ok) {
+                        // Redirigir a la página de agradecimiento
                         window.location.href = '../gracias.html';
                     } else {
                         alert('Error al guardar los resultados.');
