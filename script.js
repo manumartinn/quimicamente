@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 animacion.style.display = 'block';
 
                 // Selección aleatoria de preguntas
-                const randomIndex = Math.floor(Math.random() * 6) + 1;
+                const randomIndex = Math.floor(Math.random() * 5) + 1;
                 setTimeout(() => {
                     window.location.href = `preguntas${randomIndex}/preguntas${randomIndex}.html?nombre=${nombre}&dni=${dni}`;
                 }, 3000);
