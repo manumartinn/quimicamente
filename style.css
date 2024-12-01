@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f3f4f6;
+    background-color: white;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -15,14 +15,19 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 20px; /* Espacio para móviles */
+    background-image: url('images/background.png'); 
+    background-size: cover; 
+    background-repeat: repeat; 
+    background-position: center; 
+    margin: 0;
 }
 
 /* Estilo del título */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #4a90e2;
-    text-align: center;
+.title {
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Estilo del formulario */
@@ -76,7 +81,7 @@ input[type="number"] {
 
 /* Estilo del botón */
 button {
-    background-color: #4a90e2;
+    background-color: rgb(91, 0, 108);
     color: white;
     border: none;
     border-radius: 5px;
@@ -88,7 +93,7 @@ button {
 }
 
 button:hover {
-    background-color: #357ab8;
+    background-color: rgb(54, 0, 63);
 }
 
 /* Estilo del mensaje de agradecimiento */
@@ -96,6 +101,21 @@ button:hover {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
+}
+
+#mensaje {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid purple;
+    padding: 20px;
+    box-shadow: 0 0 2px purple, /* Sombra verde */ 
+                0 0 3px purple, 
+                0 0 4px purple, 
+                0 0 5px purple, 
+                0 0 6px purple, 
+                0 0 7px purple, 
+                0 0 8px purple;
 }
 
 /* Media Queries para Responsividad */
